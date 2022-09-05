@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 type TState = {
 	toggle: boolean,
 }
 
-const Navbar = () => {
+const BasicNavbar = () => {
 	const [state, setState] = useState<TState>({
 		toggle: false,
 	})
@@ -29,15 +29,6 @@ const Navbar = () => {
 							<ul className='flex h-full'>
 								<li key='1'><NavLink to='/1' className='flex h-full items-center px-5 text-lg text-white hover:bg-lime-800'>Example 1</NavLink></li>
 								<li key='2'><NavLink to='/2' className='flex h-full items-center px-5 text-lg text-white hover:bg-lime-800'>Example 2</NavLink></li>
-								<li key='3' className='group'>
-									<div className='relative flex h-full cursor-pointer items-center px-5 text-lg text-white hover:bg-lime-800'>
-										Dropdown <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-									</div>
-									<div className='top-14 hidden w-full bg-lime-700 text-lg group-hover:float-right group-hover:block'>
-										<li className='w-full text-lg text-white hover:bg-lime-800'><NavLink to='/1' className='block w-full px-5 py-2'>Example 1</NavLink></li>
-										<li className='w-full text-lg text-white hover:bg-lime-800'><NavLink to='/2' className='block w-full px-5 py-2'>Example 2</NavLink></li>
-									</div>
-								</li>
 							</ul>
 						</div>
 						<div onClick={() => toggleHamburger()} className='h-full sm:hidden'>
@@ -51,9 +42,7 @@ const Navbar = () => {
 							{state.toggle && <ul className={`absolute top-14 left-0 w-screen bg-lime-700 p-5 text-center text-2xl text-white`}>
 								<li key='1' className='my-4'><NavLink to='/1' >Example 1</NavLink></li>
 								<li key='2' className='my-4'><NavLink to='/2' >Example 2</NavLink></li>
-								{/* TODO mobile menu sidebar */}
 							</ul>}
-
 						</div>
 					</nav>
 				</div>
@@ -62,4 +51,4 @@ const Navbar = () => {
 	)
 }
 
-export default Navbar;
+export default BasicNavbar;
