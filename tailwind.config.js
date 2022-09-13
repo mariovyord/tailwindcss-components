@@ -20,7 +20,7 @@ module.exports = {
                 'base': colors.white,
                 'base-darker': colors.slate[300],
                 'base-darkest': colors.slate[400],
-                'base-content': colors.black,
+                'base-content': colors.slate[700],
                 'info': colors.orange[500],
                 'info-content': colors.white,
                 'success': colors.cyan[600],
