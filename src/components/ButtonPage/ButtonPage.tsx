@@ -5,7 +5,7 @@ import CircleButton from 'library/actions/button/circleButton/CircleButton';
 
 const ButtonPage = () => {
     return (
-        <div className=''>
+        <div className='px-6'>
             <h1 className='my-6 text-4xl font-black'>Button</h1>
             <div>
                 <p>Interactive button activated by a user.</p>
